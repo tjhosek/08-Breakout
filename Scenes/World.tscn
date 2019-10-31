@@ -19,6 +19,7 @@ radius = 12.018
 [node name="World" type="Node"]
 
 [node name="Paddle" type="KinematicBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 512, 544 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -32,6 +33,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Ball" type="RigidBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 512, 480 )
 mode = 2
 physics_material_override = SubResource( 2 )
@@ -51,11 +53,13 @@ texture = ExtResource( 4 )
 shape = SubResource( 3 )
 
 [node name="Wall" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
 polygon = PoolVector2Array( 0, 640, 0, 0, 1024, 0, 1024, 640, 1088, 640, 1088, -64, -64, -64, -64, 640, 0, 640 )
 
 [node name="Tiles" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Gray Tiles" type="Node" parent="Tiles"]
 
@@ -216,3 +220,19 @@ position = Vector2( 800, 64 )
 
 [node name="Tile10" parent="Tiles/Purple Tiles" instance=ExtResource( 5 )]
 position = Vector2( 896, 64 )
+
+[node name="Score" type="Label" parent="."]
+margin_top = 544.0
+margin_right = 128.0
+margin_bottom = 576.0
+text = "Score: 0"
+valign = 1
+
+[node name="Lives" type="Label" parent="."]
+margin_left = 896.0
+margin_top = 544.0
+margin_right = 1024.0
+margin_bottom = 576.0
+text = "Lives: 3"
+align = 2
+valign = 1
