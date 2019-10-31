@@ -1,0 +1,21 @@
+[gd_scene format=2]
+
+[node name="Endstate" type="Node2D"]
+
+[node name="Message" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Message"]
+margin_left = 480.0
+margin_top = 256.0
+margin_right = 576.0
+margin_bottom = 288.0
+color = Color( 0.294118, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="Message"]
+margin_left = 480.0
+margin_top = 256.0
+margin_right = 576.0
+margin_bottom = 288.0
+text = "Game Over"
+align = 1
+valign = 1
